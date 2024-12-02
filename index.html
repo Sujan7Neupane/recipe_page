@@ -58,6 +58,16 @@
         right: 40%;
         top: 10%;
         padding: 10px;
+        box-shadow: 0px 0px 1px 1px gray;
+      }
+
+      .stars-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .stars-container span {
+        margin-left: 7px;
       }
       .wrapper-container .image-container img {
         height: 100%;
@@ -95,12 +105,60 @@
       }
 
       .desc-wrapper {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
       }
 
       .desc-wrapper p {
         font-style: italic;
+      }
+
+      .checkbox-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .checkbox {
+        display: none;
+      }
+
+      .checkbox + .tick {
+        width: 14px;
+        height: 14px;
+        border: 2px solid #333;
+        border-radius: 4px;
+        margin-right: 10px;
+        position: relative;
+      }
+
+      .checkbox:checked + .tick {
+        background-color: #4eaf4c; /* Green background when checked */
+      }
+
+      .checkbox:checked + .tick::after {
+        content: ""; /* Tick mark when checked */
+        color: white;
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        font-size: 16px;
+      }
+
+      .instruction-container {
+        margin-top: 1rem;
+      }
+
+      .instruction-container ol {
+        padding: 0.5rem;
+        margin-left: 1rem;
       }
     </style>
   </head>
@@ -114,8 +172,15 @@
           />
         </div>
         <div class="overlay-container">
-          <div class="stars-container"></div>
-          <small>(189)</small>
+          <div class="stars-container">
+            <box-icon type='solid' name='star'></box-icon>
+            <box-icon type='solid' name='star'></box-icon>
+            <box-icon type='solid' name='star'></box-icon>
+            <box-icon name='star-half' type='solid' color='#000' ></box-icon>
+            <box-icon name='star' color='#000' ></box-icon>
+            <span>(189)</span>
+          </div>
+          
           <h1 class="main-title">Sweet iced coffee with Coconut Milk</h1>
         </div>
 
@@ -158,6 +223,45 @@
             </p>
           </div>
           <!-- second element -->
+
+          <!-- third div -->
+          <div class="checkbox-container">
+            <h2 class="checkbox-title">Ingredients</h2>
+            <label class="checkbox-item">
+              <input type="checkbox" class="checkbox" />
+              <span class="tick"></span> Option 1
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="checkbox" />
+              <span class="tick"></span> Option 2
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="checkbox" />
+              <span class="tick"></span> Option 3
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="checkbox" />
+              <span class="tick"></span> Option 4
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="checkbox" />
+              <span class="tick"></span> Option 5
+            </label>
+          </div>
+          <!-- third div -->
+
+          <!-- fourth div -->
+           <div class="instruction-container">
+            <h2 class="instruction-title">Instructions</h2>
+            <ol class="inst" >
+                <li class="list-items">1 cup of brewed coffee (strong or regular, depending on your preference)</li>
+                <li class="list-items">1/2 cup of coconut milk (canned or refrigerated)</li>
+                <li class="list-items">1-2 tablespoons of sweetener (sugar, honey, maple syrup, or a sugar substitute)</li>
+                <li class="list-items">Ice cubes</li>
+                <li class="list-items">Optional: A pinch of cinnamon or vanilla extract for extra flavor</li>
+            </ol>
+           </div>
+          <!-- fourth div -->
         </div>
       </div>
     </section>
