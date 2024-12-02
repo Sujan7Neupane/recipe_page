@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipe page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      #main-section {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .wrapper-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .wrapper-container .image-container {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        flex: 0 0 50%;
+      }
+
+      .wrapper-container .image-container::after {
+        content: "sweet iced coffee with coconut milk";
+        position: absolute;
+        width: 30%;
+        bottom: 10px;
+        left: 0;
+        background-color: black;
+        color: #fff;
+        z-index: 1;
+        text-transform: uppercase;
+      }
+
+      .overlay-container {
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 300px;
+        right: 40%;
+        top: 10%;
+        padding: 10px;
+      }
+      .wrapper-container .image-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .details-container {
+        position: fixed;
+        top: 195px;
+        left: 75%;
+        transform: translateX(-50%);
+        width: 50%;
+        padding: 10px;
+      }
+
+      .badge-info-container {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .badge-element {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .badge-element .details-wrapper .title-badge {
+        text-transform: uppercase;
+      }
+
+      .badge-element .details-wrapper .detail {
+        color: orange;
+      }
+
+      .desc-wrapper {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .desc-wrapper p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="main-section">
+      <div class="wrapper-container">
+        <div class="image-container">
+          <img
+            src="./images/main-profile-img.avif"
+            alt="coffee-coconut-image"
+          />
+        </div>
+        <div class="overlay-container">
+          <div class="stars-container"></div>
+          <small>(189)</small>
+          <h1 class="main-title">Sweet iced coffee with Coconut Milk</h1>
+        </div>
+
+        <div class="details-container">
+          <!-- /* left container */ -->
+          <!-- first element -->
+          <div class="badge-info-container">
+            <div class="badge-element">
+              <box-icon type="solid" name="time"></box-icon>
+              <div class="details-wrapper">
+                <h4 class="title-badge">total time</h4>
+                <p class="detail">10 minutes</p>
+              </div>
+            </div>
+
+            <div class="badge-element">
+              <box-icon type="solid" name="time"></box-icon>
+              <div class="details-wrapper">
+                <h4 class="title-badge">total time</h4>
+                <p class="detail">10 minutes</p>
+              </div>
+            </div>
+
+            <div class="badge-element">
+              <box-icon type="solid" name="time"></box-icon>
+              <div class="details-wrapper">
+                <h4 class="title-badge">total time</h4>
+                <p class="detail">10 minutes</p>
+              </div>
+            </div>
+          </div>
+          <!-- first element -->
+
+          <!-- second element -->
+          <div class="desc-wrapper">
+            <p class="main-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+              accusantium quam. Dolores laborum aperiam aliquid, excepturi qui
+              rem beatae eaque.
+            </p>
+          </div>
+          <!-- second element -->
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
