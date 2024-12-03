@@ -132,11 +132,11 @@ body {
 }
 
 .checkbox:checked + .tick {
-  background-color: #4eaf4c; /* Green background when checked */
+  background-color: #4eaf4c;
 }
 
 .checkbox:checked + .tick::after {
-  content: ""; /* Tick mark when checked */
+  content: "";
   color: white;
   position: absolute;
   top: 2px;
